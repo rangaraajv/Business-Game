@@ -1,0 +1,27 @@
+body{
+    background-color: #7f8c8d;     
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+table, th, td {
+    border: 3px solid #7f8c8d;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: #dfe6e9;
+}
+.inner-table{
+    width: 95%;
+    margin: 15px;
+}
+.amt{
+    text-align: right;
+}
+.bank-t .inner-table{
+    width: 60%;
+}
+.calc{
+    border: 0;
+    text-align: center;
+}

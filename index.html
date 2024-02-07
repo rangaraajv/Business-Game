@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>Business Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <center>
+        <table class="calc">
+            <tr>
+                <th><label for="from">FROM</label></th>
+                <th><label for="to">TO</label></th>
+                <th><label for="amount">AMOUNT</label></th>
+                <th><label for="add">ADDITION</label></th>
+                <th><label for="sub">SUBTRACTION</label></th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="from" id="from">
+                        <option value="Ranga">Ranga</option>
+                        <option value="Visnu">Visnu</option>
+                        <option value="Divakar">Divakar</option>
+                        <option value="Vignesh">Vignesh</option>
+                        <option value="Bank">Bank</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="to" id="to">
+                        <option value="Ranga">Ranga</option>
+                        <option value="Visnu">Visnu</option>
+                        <option value="Divakar">Divakar</option>
+                        <option value="Vignesh">Vignesh</option>
+                        <option value="Bank">Bank</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="tempAmount" >
+                </td>
+                <td>
+                    <button id="addition" onclick="addFunction()">Add (+)</button>
+                </td>
+                <td>
+                    <button id="subtraction" onclick="subFunction()">Sub (-)</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <br>
+
+    <table width="100%">
+        <tr>
+            <td>
+                <center>
+                    <table class="inner-table">
+                        <tr>
+                            <th colspan="2"><label for="ranga">Ranga</label></th>
+                        </tr>
+                        <tr>
+                            <td><label for="visnu">Visnu</label></td>
+                            <td class="amt"><input type="text" id="rtvis" value="0" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="divakar">Divakar</label></td>
+                            <td class="amt"><input type="text" id="rtd" value="0" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="vignesh">Vignesh</label></td>
+                            <td class="amt"><input type="text" id="rtvig" value="0" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bank">Bank</label></td>
+                            <td class="amt"><input type="text" id="rtb" value="0" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="amt"><input type="text" id="rtot" value="0" readonly></td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+            <td>
+                <center>
+                    <table class="inner-table">
+                        <tr>
+                            <th colspan="2"><label for="visnu">Visnu</label></th>
+                        </tr>
+                        <tr>
+                            <td><label for="ranga">Ranga</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="divakar">Divakar</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="vignesh">Vignesh</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bank">Bank</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center>
+                    <table class="inner-table">
+                        <tr>
+                            <th colspan="2"><label for="divakar">Divakar</label></th>
+                        </tr>
+                        <tr>
+                            <td><label for="ranga">Ranga</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="visnu">Visnu</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="vignesh">Vignesh</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bank">Bank</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+            <td>
+                <center>
+                    <table class="inner-table">
+                        <tr>
+                            <th colspan="2"><label for="vignesh">Vignesh</label></th>
+                        </tr>
+                        <tr>
+                            <td><label for="ranga">Ranga</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="visnu">Visnu</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="divakar">Divakar</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bank">Bank</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+        <tr class="bank-t">
+            <td colspan="2">
+                <center>
+                    <table class="inner-table">
+                        <tr>
+                            <th colspan="2"><label for="bank">Bank</label></th>
+                        </tr>
+                        <tr>
+                            <td><label for="ranga">Ranga</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="visnu">Visnu</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="divakar">Divakar</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="vignesh">Vignesh</label></td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td class="amt"><input type="text" id="amount" readonly></td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
