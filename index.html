@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
     <title>Business Game</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="board-game.png">
+    <link rel="icon" href="https://github.com/rangaraajv/Business-Game/blob/main/board-game.png?raw=true">
     <script src="main.js"></script>
 </head>
 <body>
@@ -44,6 +44,7 @@
                     <button id="addP4" onclick="addP4()">Add P4</button>
                     <button id="addBank" onclick="addBank()">Add Bank</button>
                     <button id="addMortage" onclick="addMortage()">Add Mortage</button>
+                    <button id="addCash" onclick="addCash()">Add Cash</button>
                 </td>
                 <td>
                     <button id="subP1" onclick="subP1()">Sub P1</button>
@@ -52,6 +53,7 @@
                     <button id="subP4" onclick="subP4()">Sub P4</button>
                     <button id="subBank" onclick="subBank()">Sub Bank</button>
                     <button id="subMortage" onclick="subMortage()">Sub Mortage</button>
+                    <button id="subCash" onclick="subCash()">Sub Cash</button>
                 </td>
             </tr>
         </table>
@@ -140,6 +142,13 @@
                                 <th><label for="Player 2">Player 2</label></th>
                                 <th><label for="Player 3">Player 3</label></th>
                                 <th><label for="Player 4">Player 4</label></th>
+                            </tr>
+                            <tr>
+                                <td><label for="Player 1">Total Cash</label></td>
+                                <td class="amt"><input type="text" id="p1c" value="0" readonly></td>
+                                <td class="amt"><input type="text" id="p2c" value="0" readonly></td>
+                                <td class="amt"><input type="text" id="p3c" value="0" readonly></td>
+                                <td class="amt"><input type="text" id="p4c" value="0" readonly></td>
                             </tr>
                             <tr>
                                 <td><label for="Player 1">Total Mortage Value</label></td>

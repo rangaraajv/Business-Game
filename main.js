@@ -189,6 +189,41 @@ function addMortage() {
     clearField();
 }
 
+function addCash() {
+    if(!checkTempAmount()){
+        var fromName = document.getElementById("from").value;
+        if(fromName == "Player 1"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p1c").value;
+            var c = parseInt(a)+parseInt(b);
+            document.getElementById("p1c").value = c;
+            p1Total();
+        }
+        if(fromName == "Player 2"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p2c").value;
+            var c = parseInt(a)+parseInt(b);
+            document.getElementById("p2c").value = c;
+            p2Total();
+        }
+        if(fromName == "Player 3"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p3c").value;
+            var c = parseInt(a)+parseInt(b);
+            document.getElementById("p3c").value = c;
+            p3Total();
+        }
+        if(fromName == "Player 4"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p4c").value;
+            var c = parseInt(a)+parseInt(b);
+            document.getElementById("p4c").value = c;
+            p4Total();
+        }
+    }
+    clearField();
+}
+
 //Subtraction Section
 function subP1() {
     if(!checkTempAmount()){
@@ -488,6 +523,41 @@ function subMortage() {
     clearField();
 }
 
+function subCash() {
+    if(!checkTempAmount()){
+        var fromName = document.getElementById("from").value;
+        if(fromName == "Player 1"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p1c").value;
+            var c = parseInt(b)-parseInt(a);
+            document.getElementById("p1c").value = c;
+            p1Total();
+        }
+        if(fromName == "Player 2"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p2c").value;
+            var c = parseInt(b)-parseInt(a);
+            document.getElementById("p2c").value = c;
+            p2Total();
+        }
+        if(fromName == "Player 3"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p3c").value;
+            var c = parseInt(b)-parseInt(a);
+            document.getElementById("p3c").value = c;
+            p3Total();
+        }
+        if(fromName == "Player 4"){
+            var a = document.getElementById("tempAmount").value;
+            var b = document.getElementById("p4c").value;
+            var c = parseInt(b)-parseInt(a);
+            document.getElementById("p4c").value = c;
+            p4Total();
+        }
+    }
+    clearField();
+}
+
 //Player 1 Total
 function p1Total(){
     var a = document.getElementById("p1tp2").value;
@@ -542,14 +612,18 @@ function toDhiwaal(){
     var b = document.getElementById("p2m").value;
     var c = document.getElementById("p3m").value;
     var d = document.getElementById("p4m").value;
+    var a1 = document.getElementById("p1c").value;
+    var b1 = document.getElementById("p2c").value;
+    var c1 = document.getElementById("p3c").value;
+    var d1 = document.getElementById("p4c").value;
     var w = document.getElementById("p1tl").value;
     var x = document.getElementById("p2tl").value;
     var y = document.getElementById("p3tl").value;
     var z = document.getElementById("p4tl").value;
-    var p1Bal = parseInt(a) - parseInt(w);
-    var p2Bal = parseInt(b) - parseInt(x);
-    var p3Bal = parseInt(c) - parseInt(y);
-    var p4Bal = parseInt(d) - parseInt(z);
+    var p1Bal = (parseInt(a)+parseInt(a1)) - parseInt(w);
+    var p2Bal = (parseInt(b)+parseInt(b1)) - parseInt(x);
+    var p3Bal = (parseInt(c)+parseInt(c1)) - parseInt(y);
+    var p4Bal = (parseInt(d)+parseInt(d1)) - parseInt(z);
     document.getElementById("p1bal").value = p1Bal;
     document.getElementById("p2bal").value = p2Bal;
     document.getElementById("p3bal").value = p3Bal;
