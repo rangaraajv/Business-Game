@@ -1,8 +1,16 @@
 body{
-    background-color: #7f8c8d;     
+    background-color: #25282B;     
     font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center;
+    min-height:85vh;
+}
+h1{
+    color: #ffffff;
+    font-size: 50px;
 }
 table, th, td {
     border: 3px solid #7f8c8d;
@@ -16,12 +24,44 @@ th, td {
     margin: 15px;
 }
 .amt{
-    text-align: right;
+    text-align: center;
 }
-.bank-t .inner-table{
-    width: 60%;
+input{
+    text-align: end;
 }
 .calc{
     border: 0;
     text-align: center;
 }
+.background {
+    width: 100px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+.line {
+    width: 112px;
+    height: 47px;
+    border-bottom: 3px solid #7f8c8d;
+    transform: translateY(-20px) translateX(5px) rotate(27deg);
+    position: absolute;
+    z-index: 1;
+}
+.background>div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.bottom {
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+} 
+.top {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+  
